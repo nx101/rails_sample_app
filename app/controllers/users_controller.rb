@@ -14,6 +14,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       # new user saved - Handle a successful save
+      log_in @user
       # assign a msg to rails flash msg hash
       flash[:success] = "Hello newly created user, Welcome to the Sample App!"
       # redirect to the new user's profile

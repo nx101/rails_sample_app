@@ -40,6 +40,8 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert_template 'users/show'
     # test for a non-empty flash msg (ow brittle)
     assert_not flash.empty?
+    # test auto-login after save
+    assert is_logged_in?
 
   end
 
