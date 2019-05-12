@@ -3,42 +3,28 @@
 	{
 		"selected_items":
 		[
+			[
+				"save",
+				"saved_email"
+			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "app/views/layouts/application.html.erb",
+			"file": "app/controllers/users_controller.rb",
 			"settings":
 			{
-				"buffer_size": 346,
+				"buffer_size": 218,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "test/controllers/static_pages_controller_test.rb",
+			"file": "config/routes.rb",
 			"settings":
 			{
-				"buffer_size": 830,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/helpers/application_helper.rb",
-			"settings":
-			{
-				"buffer_size": 270,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/static_pages/home.html.erb",
-			"settings":
-			{
-				"buffer_size": 152,
-				"encoding": "UTF-8",
+				"buffer_size": 267,
 				"line_ending": "Unix"
 			}
 		}
@@ -77,30 +63,49 @@
 	[
 		"/Users/nadav.kaufman/RubymineProjects/sample_app",
 		"/Users/nadav.kaufman/RubymineProjects/sample_app/app",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/assets",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/assets/stylesheets",
 		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/controllers",
-		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/helpers",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/jobs",
 		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/models",
 		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/views",
-		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/views/layouts",
 		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/views/static_pages",
-		"/Users/nadav.kaufman/RubymineProjects/sample_app/config",
-		"/Users/nadav.kaufman/RubymineProjects/sample_app/test",
-		"/Users/nadav.kaufman/RubymineProjects/sample_app/test/controllers"
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/views/users",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/config"
 	],
 	"file_history":
 	[
-		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/helpers/application_helper.rb",
-		"/Users/nadav.kaufman/RubymineProjects/sample_app/test/test_helper.rb",
-		"/Users/nadav.kaufman/RubymineProjects/sample_app/test/controllers/static_pages_controller_test.rb",
-		"/Users/nadav.kaufman/RubymineProjects/sample_app/config/routes.rb",
-		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/views/static_pages/contact.html.erb",
-		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/controllers/static_pages_controller.rb",
-		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/views/static_pages/home.html.erb",
-		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/views/static_pages/help.html.erb",
-		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/views/static_pages/about.html.erb",
-		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/views/layouts/application.html.erb",
-		"/Users/nadav.kaufman/RubymineProjects/sample_app/Gemfile",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/views/users/show.html.erb",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/assets/stylesheets/custom.scss",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/helpers/users_helper.rb",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/models/user.rb",
 		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/controllers/application_controller.rb",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/controllers/users_controller.rb",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/test/models/user_test.rb",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/views/layouts/application.html.erb",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/config/routes.rb",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/views/users/new.html.erb",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/controllers/static_pages_controller.rb",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/Gemfile",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/db/migrate/20190507114912_add_index_to_users_email.rb",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/db/migrate/20190507070940_create_users.rb",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/db/migrate/20190507143814_add_password_digest_to_users.rb",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/test/fixtures/users.yml",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/views/static_pages/home.html.erb",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/db/schema.rb",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/test/controllers/static_pages_controller_test.rb",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/test/controllers/users_controller_test.rb",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/test/integration/site_layout_test.rb",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/views/static_pages/help.html.erb",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/test/test_helper.rb",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/test/application_system_test_case.rb",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/views/layouts/_footer.html.erb",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/views/layouts/_header.html.erb",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/views/static_pages/contact.html.erb",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/views/layouts/_shim.html.erb",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/helpers/application_helper.rb",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/example_user.rb",
+		"/Users/nadav.kaufman/RubymineProjects/sample_app/app/views/static_pages/about.html.erb",
 		"/Users/nadav.kaufman/RubymineProjects/sample_app/README.md",
 		"/Users/nadav.kaufman/RubymineProjects/toy_app/config/routes.rb",
 		"/Users/nadav.kaufman/RubymineProjects/toy_app/app/controllers/microposts_controller.rb",
@@ -147,74 +152,44 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/layouts/application.html.erb",
+					"file": "app/controllers/users_controller.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 346,
+						"buffer_size": 218,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								346,
-								346
+								207,
+								207
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).sublime-syntax"
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "test/controllers/static_pages_controller_test.rb",
+					"file": "config/routes.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 830,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								355,
-								355
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 100.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/helpers/application_helper.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 270,
+						"buffer_size": 267,
 						"regions":
 						{
 						},
@@ -233,35 +208,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/views/static_pages/home.html.erb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 152,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								152,
-								152
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -344,7 +291,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 220.0,
+	"side_bar_width": 239.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
