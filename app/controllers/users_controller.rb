@@ -6,13 +6,14 @@ class UsersController < ApplicationController
 
   def index
     # using pagination will_paginate etc
-    @users = User.paginate(page: params[:page])
+    @users = User.where(activated: true).paginate(page: params[:page])
   end
 
 
   def show
     # we create this instance var to be used by the 'show' view
     @user = User.find(params[:id])
+    redirect_to root_url and return unless @user.activated?
     # debugger
   end
 
@@ -23,15 +24,21 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+
   def create
     @user = User.new(user_params)
     if @user.save
       # new user saved - Handle a successful save
-      log_in @user
-      # assign a msg to rails flash msg hash
-      flash[:success] = "Hello newly created user, Welcome to the Sample App!"
-      # redirect to the new user's profile
-      redirect_to @user  # same as: redirect_to user_url(@user)
+
+      @user.send_activation_email
+      flash[:info] = "Please check your email to activate your account."
+      redirect_to root_url
+
+      # log_in @user
+      # # assign a msg to rails flash msg hash
+      # flash[:success] = "Hello newly created user, Welcome to the Sample App!"
+      # # redirect to the new user's profile
+      # redirect_to @user  # same as: redirect_to user_url(@user)
     else
       render 'new'
     end
