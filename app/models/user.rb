@@ -13,9 +13,11 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false}
 
   has_secure_password
-  validates :password, presence: true, length: { minimum: 6 }
-
-
+  validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
+  # note - # nill passwords will bypass main validation
+  # but has_secure.. will validate nil passwords
+  # via a separated presence validation,
+  # upon the db
 
 
   # Auth & Session methods
