@@ -1,12 +1,42 @@
 class User < ApplicationRecord
 
+
+
+  # ===================================
+  #
   has_many :microposts, dependent: :destroy
 
-  attr_accessor :remember_token, :activation_token, :reset_token
-  validates :name,  presence: true, length: { maximum: 50 }
+
+  has_many :active_relationships, class_name:  "Relationship",
+           foreign_key: "follower_id",
+           dependent:   :destroy
+  # counterpart
+  has_many :passive_relationships, class_name:  "Relationship",
+           foreign_key: "followed_id",
+           dependent:   :destroy
+
+
+
+  # define 'following' relation,
+  # *through* the 'active_relationships' relation,
+  # using col 'followed' as source for the following array,
+  # which will be the set of followed ids.
+  has_many :following, through: :active_relationships, source: :followed
+  # counterpart
+  has_many :followers, through: :passive_relationships, source: :follower
+
+
+  # ===================================
+
 
   before_save :downcase_email
   before_create :create_activation_digest
+
+
+  # ===================================
+
+  attr_accessor :remember_token, :activation_token, :reset_token
+  validates :name,  presence: true, length: { maximum: 50 }
 
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -20,6 +50,12 @@ class User < ApplicationRecord
   # but has_secure.. will validate nil passwords
   # via a separated presence validation,
   # upon the db
+
+
+  # ===================================
+
+
+
 
 
   # Auth & Session methods
@@ -102,11 +138,55 @@ class User < ApplicationRecord
     reset_sent_at < 2.hours.ago
   end
 
+
+
+
+  # Microposts Feed
+  # ===================================
+
   # Defines a proto-feed
   # See "Following users" for the full implementation
   def feed
     Micropost.where("user_id = ?", id) # equiv to 'microposts'
   end
+
+
+
+
+  # Following Other Users
+  # ===================================
+
+  # Follows a user
+  def follow(other_user)
+    following << other_user
+  end
+
+  # Unfollows a user
+  def unfollow(other_user)
+    following.delete(other_user)
+  end
+
+  # Returns true if the current user is following the other user.
+  def following?(other_user)
+    following.include?(other_user)
+  end
+
+
+
+  # Feed
+  # ===================================
+
+  # Returns a user's status feed
+  def feed
+    following_ids = "SELECT followed_id FROM relationships
+                   WHERE  follower_id = :user_id"
+    Micropost.where("user_id IN (#{following_ids})
+                   OR user_id = :user_id", user_id: id)
+    end
+
+
+
+
 
 
 
